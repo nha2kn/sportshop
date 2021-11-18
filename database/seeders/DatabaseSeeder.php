@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,5 +16,108 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+
+        DB::table('users')->insert([
+            [
+                'id' => 1,
+                'customer_id' => 1,
+                'username' => 'vokhachhang',
+                'password' => Hash::make('123456'),
+                'avatar' => null,
+            ],
+
+        ]);
+
+        DB::table('accounts')->insert([
+            [
+                'id' => 1,
+                'employee_id' => 1,
+                'username' => 'vohost',
+                'password' => Hash::make('123456'),
+                'level' => 0,
+                'avatar' => null,
+            ]
+        ]);
+
+        DB::table('bills')->insert([
+            [
+                'id' => 1,
+                'customer_id' => 1,
+                'user_id' => 1,
+                'bill_details' => 'chi tiết hóa đơn',
+            ]
+        ]);
+
+        DB::table('categories')->insert([
+            [
+                'id' => 1,
+                'name' => 'Áo',
+            ]
+        ]);
+
+        DB::table('customer-types')->insert([
+            [
+                'id' => 1,
+                'customer_id' => 1,
+                'name' => 'Đồng',
+            ]
+        ]);
+        DB::table('customers')->insert([
+            [
+                'id' => 1,
+                'name' => 'vokhachhang',
+                'phone' => 0,
+                'address' => 'Anh lớn Di Linh',
+            ]
+        ]);
+
+        DB::table('employees')->insert([
+            [
+                'id' => 1,
+                'name' => 'vonhanvien',
+                'address' => 'osin popayes',
+                'phone' => 0,
+            ]
+        ]);
+
+        DB::table('products')->insert([
+            [
+                'id' => 1,
+                'name' => 'Áo thun shopee',
+                'quantity' => 1,
+                'size' => 'M',
+                'color' => 'Đen',
+                'image' => '1.jpg',
+                'price' => 30000,
+                'category_id' => 1,
+                'supplier_id' => 1,
+            ]
+        ]);
+
+        DB::table('receipts')->insert([
+            [
+                'id' => 1,
+                'supplier_id' => 1,
+                'product_id' => 1,
+                'receipt_details' => 'chi tiết phiếu nhập',
+            ]
+        ]);
+
+        DB::table('sales')->insert([
+            [
+                'id' => 1,
+                'product_id' => 1,
+                'bill_id' => 1,
+            ]
+        ]);
+
+        DB::table('suppliers')->insert([
+            [
+                'id' => 1,
+                'name' => 'Bác Vượng',
+                'address' => 'Việt Nam',
+                'phone' => 0,
+            ]
+        ]);
     }
 }
