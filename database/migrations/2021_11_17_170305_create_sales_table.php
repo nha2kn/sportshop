@@ -17,6 +17,8 @@ class CreateSalesTable extends Migration
             $table->id();
             $table->integer('product_id')->unsigned();
             $table->integer('bill_id')->unsigned();
+            $table->integer('quantity');
+            $table->integer('product_price');
             $table->timestamps();
         });
     }

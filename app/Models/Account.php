@@ -12,4 +12,12 @@ class Account extends Model
     protected $table = 'accounts';
     protected $primaryKey = 'id';
     protected $guarded = [];
+
+    public function employee() {
+        return $this->belongsTo(Employee::class, 'employee_id', 'id');
+    }
+
+    public function customer() {
+        return $this->belongsTo(Customer::class, 'account_id', 'id');
+    }
 }

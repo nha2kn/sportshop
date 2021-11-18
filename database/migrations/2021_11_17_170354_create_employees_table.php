@@ -18,6 +18,7 @@ class CreateEmployeesTable extends Migration
             $table->string('name');
             $table->string('address');
             $table->integer('phone')->unique();
+            $table->integer('account_id')->unsigned();
             $table->timestamps();
         });
     }

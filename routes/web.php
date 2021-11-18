@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\Front\HomeController;
+use App\Models\Account;
+use App\Models\Customer;
+use App\Models\Employee;
 use App\Models\User;
+use Facade\FlareClient\View;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+

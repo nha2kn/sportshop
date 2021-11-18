@@ -17,24 +17,49 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        DB::table('users')->insert([
+        DB::table('employees')->insert([
             [
                 'id' => 1,
-                'customer_id' => 1,
-                'username' => 'vokhachhang',
-                'password' => Hash::make('123456'),
-                'avatar' => null,
+                'name' => 'vonhanvien',
+                'address' => 'osin popayes',
+                'phone' => 0,
+                'account_id' => 1,
             ],
-
+            [
+                'id' => 2,
+                'name' => 'vonhanvien2',
+                'address' => 'Q8',
+                'phone' => 1,
+                'account_id' => 2,
+            ]
         ]);
 
         DB::table('accounts')->insert([
             [
                 'id' => 1,
                 'employee_id' => 1,
+                'customer_id' => 0,
                 'username' => 'vohost',
                 'password' => Hash::make('123456'),
                 'level' => 0,
+                'avatar' => null,
+            ],
+            [
+                'id' => 2,
+                'employee_id' => 2,
+                'customer_id' => 0,
+                'username' => 'voadmin',
+                'password' => Hash::make('123456'),
+                'level' => 1,
+                'avatar' => null,
+            ],
+            [
+                'id' => 3,
+                'employee_id' => 0,
+                'customer_id' => 1,
+                'username' => 'vouser',
+                'password' => Hash::make('123456'),
+                'level' => 2,
                 'avatar' => null,
             ]
         ]);
@@ -43,7 +68,7 @@ class DatabaseSeeder extends Seeder
             [
                 'id' => 1,
                 'customer_id' => 1,
-                'user_id' => 1,
+                'employee_id' => 1,
                 'bill_details' => 'chi tiết hóa đơn',
             ]
         ]);
@@ -68,15 +93,8 @@ class DatabaseSeeder extends Seeder
                 'name' => 'vokhachhang',
                 'phone' => 0,
                 'address' => 'Anh lớn Di Linh',
-            ]
-        ]);
-
-        DB::table('employees')->insert([
-            [
-                'id' => 1,
-                'name' => 'vonhanvien',
-                'address' => 'osin popayes',
-                'phone' => 0,
+                'type_id' => 1,
+                'account_id' => 1,
             ]
         ]);
 
@@ -90,7 +108,6 @@ class DatabaseSeeder extends Seeder
                 'image' => '1.jpg',
                 'price' => 30000,
                 'category_id' => 1,
-                'supplier_id' => 1,
                 'employee_id' => 1,
             ]
         ]);
@@ -109,6 +126,8 @@ class DatabaseSeeder extends Seeder
                 'id' => 1,
                 'product_id' => 1,
                 'bill_id' => 1,
+                'quantity' => 1,
+                'product_price' => 30000,
             ]
         ]);
 

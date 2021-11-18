@@ -1996,7 +1996,7 @@
 }
  .new-account-login h5 {
      font-size: 18px;
-     color: #1111111;
+     color: #111111;
      font-weight: 600;
 }
  .new-account-login h5 a:hover{
@@ -2396,7 +2396,13 @@
      white-space: nowrap;
 }
  
-
+.special-list {
+    display: flex;
+    max-height: 440px;
+    max-width: 1140px;
+    overflow-x: auto;
+    flex-wrap: nowrap !important;
+}
 
 
 

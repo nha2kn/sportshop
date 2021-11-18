@@ -18,6 +18,8 @@ class CreateCustomersTable extends Migration
             $table->string('name');
             $table->integer('phone')->unique();
             $table->string('address');
+            $table->integer('type_id')->unsigned();
+            $table->integer('account_id')->unsigned();
             $table->timestamps();
         });
     }
