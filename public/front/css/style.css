@@ -2481,15 +2481,4 @@ ul.cart-list > li.total > .btn:hover {
     white-space: nowrap;
 }
 
-.list-product {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-}
 
-.product-item {
-    min-height: 400px;
-    min-width: 290px;
-    max-height: 440px;
-    scroll-snap-align: start;
-}
