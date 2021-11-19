@@ -17,7 +17,7 @@ class CreateReceiptsTable extends Migration
             $table->id();
             $table->integer('supplier_id')->unsigned();
             $table->integer('product_id')->unsigned();
-            $table->string('receipt_details');
+            $table->string('receipt_details')->collation('utf8_general_ci');
             $table->timestamps();
         });
     }

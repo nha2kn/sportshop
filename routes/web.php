@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Front\CartController;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\ShopController;
 use App\Models\Account;
 use App\Models\Customer;
 use App\Models\Employee;
@@ -20,4 +22,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+
+Route::prefix('shop')->group(function() {
+    Route::get('/product/{id}', [ShopController::class, 'show']);
+    Route::post('/product/{id}', [ShopController::class, 'postComment']);
+    Route::get('/', [ShopController::class, 'index']);
+});
+
+Route::prefix('cart')->group(function() {
+    Route::get('add/{id}', [CartController::class, 'add']);
+    Route::get('/', [CartController::class, 'index']);
+    Route::get('delete/{rowId}', [CartController::class, 'delete']);
+    Route::get('/update', [CartController::class, 'update']);
+});
 
