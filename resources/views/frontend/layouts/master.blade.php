@@ -3,6 +3,8 @@
 <!-- Basic -->
 
 <head>
+    <base href="{{ asset('/') }}">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -28,6 +30,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="front/css/custom.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.0.1/dist/tailwind.min.css">
+
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -36,51 +41,22 @@
 </head>
 
 <body>
-    
+
 
     <!-- Start Main Top -->
     <div class="main-top">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="text-slid-box">
-                        <div id="offer-box" class="carouselTicker">
-                            <ul class="offer-box">
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 10%! Shop Now Man
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% off on Fashion
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT20
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 10%! Shop Now Man
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% off on Fashion
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT20
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="custom-select-box">
                         <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-						<option>¥ JPY</option>
-						<option>$ USD</option>
-						<option>€ EUR</option>
-					</select>
+                            <option>¥ JPY</option>
+                            <option>$ USD</option>
+                            <option>€ EUR</option>
+                        </select>
                     </div>
                     <div class="right-phone-box">
                         <p>Call US :- <a href="#"> +11 900 800 100</a></p>
@@ -106,8 +82,8 @@
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
+                        <i class="fa fa-bars"></i>
+                    </button>
                     <a class="navbar-brand" href="index.balde.php"><img src="front/images/logo.png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
@@ -115,77 +91,15 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="index.balde.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.balde.php">About Us</a></li>
-                        <li class="dropdown megamenu-fw">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Product</a>
-                            <ul class="dropdown-menu megamenu-content" role="menu">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-menu col-md-3">
-                                            <h6 class="title">Top</h6>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="shop.balde.php">Jackets</a></li>
-                                                    <li><a href="shop.balde.php">Shirts</a></li>
-                                                    <li><a href="shop.balde.php">Sweaters & Cardigans</a></li>
-                                                    <li><a href="shop.balde.php">T-shirts</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- end col-3 -->
-                                        <div class="col-menu col-md-3">
-                                            <h6 class="title">Bottom</h6>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="shop.balde.php">Swimwear</a></li>
-                                                    <li><a href="shop.balde.php">Skirts</a></li>
-                                                    <li><a href="shop.balde.php">Jeans</a></li>
-                                                    <li><a href="shop.balde.php">Trousers</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- end col-3 -->
-                                        <div class="col-menu col-md-3">
-                                            <h6 class="title">Clothing</h6>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="shop.balde.php">Top Wear</a></li>
-                                                    <li><a href="shop.balde.php">Party wear</a></li>
-                                                    <li><a href="shop.balde.php">Bottom Wear</a></li>
-                                                    <li><a href="shop.balde.php">Indian Wear</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-menu col-md-3">
-                                            <h6 class="title">Accessories</h6>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="shop.balde.php">Bags</a></li>
-                                                    <li><a href="shop.balde.php">Sunglasses</a></li>
-                                                    <li><a href="shop.balde.php">Fragrances</a></li>
-                                                    <li><a href="shop.balde.php">Wallets</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- end col-3 -->
-                                    </div>
-                                    <!-- end row -->
-                                </li>
-                            </ul>
+                        <li class="{{ (request()->segment(1) == '') ? 'active' : '' }} nav-item"><a class="nav-link" href="./">Home</a></li>
+                        <li class="{{ (request()->segment(1) == 'about') ? 'active' : '' }} nav-item"><a class="nav-link" href="about.balde.php">About Us</a></li>
+                        <li class="{{ (request()->segment(1) == 'shop') ? 'active' : '' }} megamenu-fw">
+                            <a href="./shop" class="nav-link dropdown-toggle ">Product</a>
+
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="cart.balde.php">Cart</a></li>
-                                <li><a href="checkout.balde.php">Checkout</a></li>
-                                <li><a href="my-account.balde.php">My Account</a></li>
-                                <li><a href="wishlist.balde.php">Wishlist</a></li>
-                                <li><a href="shop-detail.balde.php">Shop Detail</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="service.balde.php">Our Service</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.balde.php">Contact Us</a></li>
+
+                        <li class="{{ (request()->segment(1) == '') ? 'active' : '' }} nav-item"><a class="nav-link" href="service.balde.php">Our Service</a></li>
+                        <li class="{{ (request()->segment(1) == '') ? 'active' : '' }} nav-item"><a class="nav-link" href="contact-us.balde.php">Contact Us</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -194,14 +108,37 @@
                 <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu"><a href="#">
-						<i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
-					</a></li>
+                        <li class="shopping-cart-show"><a href="./cart" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">{{Cart::count()}}</span></a></li>
+                        <div class="shopping-cart">
+                            <div class="shopping-cart-header">
+                                <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                                <div class="shopping-cart-total">
+                                    <span class="lighter-text">Total:</span>
+                                    <span class="main-color-text">$2,229.97</span>
+                                </div>
+                            </div>
+                            <!--end shopping-cart-header -->
+
+                            <ul class="shopping-cart-items">
+                                <li class="clearfix">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
+                                    <span class="item-name">Sony DSC-RX100M III</span>
+                                    <span class="item-price">$849.99</span>
+                                    <span class="item-quantity">Quantity: 01</span>
+                                </li>
+
+                            </ul>
+
+                            <a href="#" class="button">Checkout</a>
+                        </div>
+                        <!--end shopping-cart -->
+
                     </ul>
                 </div>
+                
                 <!-- End Atribute Navigation -->
             </div>
+            
             <!-- Start Side Menu -->
             <div class="side">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
@@ -231,6 +168,7 @@
             </div>
             <!-- End Side Menu -->
         </nav>
+        
         <!-- End Navigation -->
     </header>
     <!-- End Main Top -->
@@ -248,12 +186,11 @@
     <!-- End Top Search -->
 
 
-
     <!-- Body here -->
-@yield('body')
+    @yield('body')
 
-<!-- Start Instagram Feed  -->
-<div class="instagram-box">
+    <!-- Start Instagram Feed  -->
+    <div class="instagram-box">
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
@@ -349,7 +286,7 @@
                         <div class="footer-widget">
                             <h4>About ThewayShop</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
+                            </p>
                             <ul>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -399,7 +336,8 @@
     <!-- Start copyright  -->
     <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
-            <a href="https://html.design/">html design</a></p>
+            <a href="https://html.design/">html design</a>
+        </p>
     </div>
     <!-- End copyright  -->
 
@@ -421,6 +359,9 @@
     <script src="front/js/form-validator.min.js"></script>
     <script src="front/js/contact-form-script.js"></script>
     <script src="front/js/custom.js"></script>
+    <script src="front/js/jquery.owl-filter.js"></script>
+    <script src="front/js/main.js"></script>
+
 </body>
 
 </html>
